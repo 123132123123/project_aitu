@@ -17,7 +17,7 @@ public class Main {
             student.setSurname(scanner1.next());
             student.setAge(Integer.parseInt(scanner1.next()));
             student.setGender(Boolean.parseBoolean(scanner1.next()));
-            student.addGrade(Integer.parseInt(scanner1.next()));
+            while (scanner1.hasNextInt()) student.addGrade(Integer.parseInt(scanner1.next()));
             school.addMember(student);
         }
 
@@ -27,20 +27,24 @@ public class Main {
             teacher.setSurname(scanner2.next());
             teacher.setAge(Integer.parseInt(scanner2.next()));
             teacher.setGender(Boolean.parseBoolean(scanner2.next()));
+            teacher.setSubject(scanner2.next());
+            teacher.setYearsOfExperience(Integer.parseInt(scanner2.next()));
+            teacher.setSalary(Integer.parseInt(scanner2.next()));
             school.addMember(teacher);
         }
 
         for (Person member : school.getMembers()){
             if (member instanceof Student) {
                 Student student = (Student) member;
-                System.out.println(student.getName() + "'s GPA: " + student.calculateGPA());
+                System.out.println(student.toString());
+                System.out.println("My GPA: " + student.calculateGPA());
             } else if (member instanceof Teacher) {
                 Teacher teacher = (Teacher) member;
                 if (teacher.getYearsOfExperience() >= 10){
                     teacher.giveRaise(10);
                 }
+                System.out.println(teacher.toString());
             }
-            member.toString();
         }
     }
 }

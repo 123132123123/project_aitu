@@ -10,6 +10,18 @@ public class Teacher extends Person{
         this.salary = salary;
     }
 
+    public void setSubject(String subject) {
+        this.subject = subject;
+    }
+
+    public void setYearsOfExperience(int yearsOfExperience) {
+        this.yearsOfExperience = yearsOfExperience;
+    }
+
+    public void setSalary(int salary) {
+        this.salary = salary;
+    }
+
     public int getYearsOfExperience() {
         return yearsOfExperience;
     }
