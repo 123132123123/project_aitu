@@ -16,7 +16,11 @@ public class Main {
             student.setName(scanner1.next());
             student.setSurname(scanner1.next());
             student.setAge(Integer.parseInt(scanner1.next()));
-            student.setGender(scanner1.next());
+            if (scanner2.next().equals("Male")) {
+                student.setGender(true);
+            }else{
+                student.setGender(false);
+            }
             while (scanner1.hasNextInt()) student.addGrade(Integer.parseInt(scanner1.next()));
             school.addMember(student);
         }
@@ -26,7 +30,11 @@ public class Main {
             teacher.setName(scanner2.next());
             teacher.setSurname(scanner2.next());
             teacher.setAge(Integer.parseInt(scanner2.next()));
-            teacher.setGender(scanner2.next());
+            if (scanner2.next().equals("Male")) {
+                teacher.setGender(true);
+            }else {
+                teacher.setGender(false);
+            }
             teacher.setSubject(scanner2.next());
             teacher.setYearsOfExperience(Integer.parseInt(scanner2.next()));
             teacher.setSalary(Integer.parseInt(scanner2.next()));

@@ -2,7 +2,7 @@ public class Person {
     private String name;
     private String surname;
     private int age;
-    private String gender;
+    private boolean gender;
 
     public Person() {
         this.name = name;
@@ -22,7 +22,7 @@ public class Person {
         this.age = age;
     }
 
-    public void setGender(String gender) {
+    public void setGender(boolean gender) {
         this.gender = gender;
     }
 
@@ -38,11 +38,11 @@ public class Person {
         return age;
     }
 
-    public String isGender() {
+    public boolean isGender() {
         return gender;
     }
 
     public String toString() {
-        return "Hi, I am " + name + " " + surname + ", a " + age + "-years-old " + gender;
+        return "Hi, I am " + name + " " + surname + ", a " + age + "-years-old " + (gender ? "male" : "female");
     }
 }
