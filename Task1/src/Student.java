@@ -30,6 +30,6 @@ public class Student extends Person {
 
     @Override
     public String toString() {
-        return super.toString() + "I am a student with ID " + id_gen + ".";
+        return super.toString() + ". I am a student with ID " + id_gen + ".";
     }
 }
